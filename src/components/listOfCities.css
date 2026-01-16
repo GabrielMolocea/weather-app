@@ -1,0 +1,96 @@
+.search-history-container {
+	margin-top: 30px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+}
+
+.search-history-title {
+	margin-top: 0;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #333;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.history-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 0;
+}
+
+.history-item:not(:last-child) {
+	border-bottom: 1px solid #eee;
+}
+
+.history-item-number {
+	font-weight: bold;
+	color: #666;
+	min-width: 30px;
+}
+
+.history-item-content {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex: 1;
+}
+
+.history-item-city-button {
+	background: none;
+	border: none;
+	color: #333;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 0;
+	text-align: left;
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+
+.history-item-city-button:hover {
+	color: #7c3aed;
+}
+
+.history-item-actions {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.history-item-timestamp {
+	color: #999;
+	font-size: 14px;
+	min-width: 110px;
+}
+
+.history-item-search-button,
+.history-item-delete-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.2s ease;
+}
+
+.history-item-search-button {
+	color: #666;
+}
+
+.history-item-search-button:hover {
+	color: #7c3aed;
+}
+
+.history-item-delete-button {
+	color: #999;
+}
+
+.history-item-delete-button:hover {
+	color: #ff4444;
+}
