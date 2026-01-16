@@ -7,7 +7,8 @@ export interface WeatherData {
 	name: string;
 	main: {
 		temp: number;
-		feels_like: number;
+		temp_max: number;
+		temp_min: number;
 		humidity: number;
 		pressure: number;
 	};
@@ -15,8 +16,8 @@ export interface WeatherData {
 		main: string;
 		description: string;
 	}>;
-	wind: {
-		speed: number;
+	sys: {
+		country: string;
 	};
 }
 

@@ -24,7 +24,13 @@ function CurrentWeather({ data }: CurrentWeatherProps) {
 
 			<div className="current-weather-city">{data.name}</div>
 
-			<h1 className="current-weather-main">{data.weather[0].main}</h1>
+			<h1 className="current-weather-main">{data.main.temp}°</h1>
+			<span className="weather-detail-value">
+				H:{Math.round(data.main.temp_max)}
+			</span>
+			<span className="weather-detail-value">
+				L:{Math.round(data.main.temp_min)}
+			</span>
 
 			<div className="weather-images">
 				{data.weather[0].description.toLowerCase().includes("clouds") ? (
@@ -35,24 +41,14 @@ function CurrentWeather({ data }: CurrentWeatherProps) {
 			</div>
 
 			<div className="current-weather-details">
-				<div className="weather-detail-row">
-					<span className="weather-detail-label">Description:</span>
-					<span className="weather-detail-value">{data.weather[0].description}</span>
-				</div>
-				<div className="weather-detail-row">
-					<span className="weather-detail-label">Temperature:</span>
-					<span className="weather-detail-value">
-						{Math.round(data.main.temp)}°C ~ {Math.round(data.main.feels_like)}°C
-					</span>
-				</div>
-				<div className="weather-detail-row">
-					<span className="weather-detail-label">Humidity:</span>
-					<span className="weather-detail-value">{data.main.humidity}%</span>
-				</div>
-				<div className="weather-detail-row">
-					<span className="weather-detail-label">Time:</span>
-					<span className="weather-detail-value">{formatDateTime(new Date())}</span>
-				</div>
+				<span className="weather-detail-value">
+					{data.name}, {data.sys.country}
+				</span>
+				<span className="weather-detail-label">Time:</span>
+				<span className="weather-detail-value">{formatDateTime(new Date())}</span>
+				<span className="weather-detail-label">Humidity:</span>
+				<span className="weather-detail-value">{data.main.humidity}%</span>
+				<span className="weather-detail-label">{data.weather[0].main}</span>
 			</div>
 		</div>
 	);
