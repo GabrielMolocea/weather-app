@@ -66,17 +66,7 @@
 	margin-right: 15px;
 }
 
-@media (prefers-color-scheme: dark) {
-	.current-weather-main,
-	.current-weather-title,
-	.current-weather-details,
-	.temp-high,
-	.temp-low {
-		color: #fff;
-	}
-}
-
-@media (max-width: 700px) {
+@media screen and (width <= 700px) {
 	.cloud-img,
 	.sun-img {
 		width: 200px;
@@ -84,5 +74,23 @@
 	.weather-images {
 		top: -80px;
 		right: 5px;
+	}
+
+	.current-weather-details {
+		flex-direction: column;
+		align-items: flex-start;
+		position: absolute;
+		top: 110px;
+		right: 30px;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.current-weather-main,
+	.current-weather-title,
+	.current-weather-details,
+	.temp-high,
+	.temp-low {
+		color: #fff;
 	}
 }

@@ -56,18 +56,12 @@
 		background-color: #1a1a1a80;
 		color: #fff;
 	}
+}
 
-	@media (max-width: 700px) {
-		.city-input,
-		.country-input {
-			width: 100%;
-		}
-	}
-
-	@media (max-width: 393px) {
-		.city-input,
-		.country-input {
-			width: 100%;
-		}
+@media screen and (width <= 700px) {
+	.city-input,
+	.country-input {
+		width: 100%;
 	}
 }
+

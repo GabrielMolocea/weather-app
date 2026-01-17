@@ -47,12 +47,12 @@ function ListOfCities({
 							>
 								{entry.city}, {entry.country}
 							</button>
-						</div>
-
-						<div className="history-item-actions">
 							<span className="history-item-timestamp">
 								{formatTime(entry.timestamp)}
 							</span>
+						</div>
+
+						<div className="history-item-actions">
 							<button
 								onClick={() => handleCityClick(entry.city)}
 								className="history-item-search-button"

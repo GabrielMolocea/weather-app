@@ -17,7 +17,7 @@
 
 .history-item {
 	display: flex;
-	justify-content: space-between;
+
 	align-items: center;
 	padding: 10px 20px 10px 20px;
 	border-radius: 15px;
@@ -28,8 +28,9 @@
 .history-item-content {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	justify-content: space-between;
 	flex: 1;
+	padding-right: 10px;
 }
 
 .history-item-city-button {
@@ -89,6 +90,15 @@
 
 .history-item-delete-button:hover {
 	color: #ff4444;
+}
+
+@media screen and (width <= 600px) {
+	.history-item-content {
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		min-width: 15rem;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
