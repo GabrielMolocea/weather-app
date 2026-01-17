@@ -28,7 +28,7 @@
 
 .city-input::placeholder,
 .country-input::placeholder {
-	color: #000;
+	color: #fff;
 	opacity: 0.4;
 	font-size: 16px;
 }

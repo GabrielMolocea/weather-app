@@ -3,12 +3,15 @@
 	justify-content: center;
 	background-image: url(assets/bg-light.png);
 	width: 100%;
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-style: 'Regular';
+	font-size: 16px;
 }
 
 .body {
 	margin: 0;
 	padding: 0;
-	font-family: "Noto Sans", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

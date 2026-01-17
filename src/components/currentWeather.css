@@ -74,5 +74,15 @@
 	.temp-low {
 		color: #fff;
 	}
-	
+}
+
+@media (max-width: 700px) {
+	.cloud-img,
+	.sun-img {
+		width: 200px;
+	}
+	.weather-images {
+		top: -80px;
+		right: 5px;
+	}
 }
