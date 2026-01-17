@@ -36,11 +36,11 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 10px;
+	gap: 10px;
 }
 
 .weather-detail-label {
 	display: inline-block;
-	width: 120px;
 	font-weight: 500;
 }
 
