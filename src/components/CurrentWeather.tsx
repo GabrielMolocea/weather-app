@@ -22,14 +22,12 @@ function CurrentWeather({ data }: CurrentWeatherProps) {
 		<div className="current-weather-container">
 			<h2 className="current-weather-title">Today's Weather</h2>
 
-			<div className="current-weather-city">{data.name}</div>
-
-			<h1 className="current-weather-main">{data.main.temp}°</h1>
-			<span className="weather-detail-value">
-				H:{Math.round(data.main.temp_max)}
+			<h1 className="current-weather-main">{Math.round(data.main.temp)}°</h1>
+			<span className="weather-detail-value temp-high">
+				H:{Math.round(data.main.temp_max)}°
 			</span>
-			<span className="weather-detail-value">
-				L:{Math.round(data.main.temp_min)}
+			<span className="weather-detail-value temp-low">
+				L:{Math.round(data.main.temp_min)}°
 			</span>
 
 			<div className="weather-images">
@@ -44,10 +42,8 @@ function CurrentWeather({ data }: CurrentWeatherProps) {
 				<span className="weather-detail-value">
 					{data.name}, {data.sys.country}
 				</span>
-				<span className="weather-detail-label">Time:</span>
 				<span className="weather-detail-value">{formatDateTime(new Date())}</span>
-				<span className="weather-detail-label">Humidity:</span>
-				<span className="weather-detail-value">{data.main.humidity}%</span>
+				<span className="weather-detail-label">Humidity: {data.main.humidity}%</span>
 				<span className="weather-detail-label">{data.weather[0].main}</span>
 			</div>
 		</div>

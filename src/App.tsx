@@ -5,10 +5,10 @@ import WeatherDisplay from "./components/WeatherDisplay";
 function App() {
 	const [weatherData, setWeatherData] = useState(null);
 	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState(null);
+	const [error, setError] = useState<string | null>(null);
 
 	const fetchWeather = async (city: string, country: string) => {
-		const apiUrl = ` https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${
+		const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${
 			import.meta.env.VITE_WEATHER_API_KEY
 		}&units=metric`;
 

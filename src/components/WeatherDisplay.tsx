@@ -35,15 +35,16 @@ function WeatherDisplay({
 	onSearch,
 }: WeatherDisplayProps) {
 	const [searchHistory, setSearchHistory] = useState<
-		Array<{ city: string; timestamp: Date }>
+		Array<{ city: string; country: string; timestamp: Date }>
 	>([]);
 
 	useEffect(() => {
 		if (data) {
 			const cityEntry = data.name;
+			const countryEntry = data.sys.country;
 			setSearchHistory((prevHistory) => {
 				const updatedHistory = [
-					{ city: cityEntry, timestamp: new Date() },
+					{ city: cityEntry, country: countryEntry, timestamp: new Date() },
 					...prevHistory.filter((entry) => entry.city !== cityEntry),
 				];
 				return updatedHistory.slice(0, 5);

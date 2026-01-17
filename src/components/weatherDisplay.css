@@ -4,15 +4,23 @@
 	margin-bottom: 20px;
 	max-width: 800px;
 	border: 1px;
+	margin-top: 10rem;
+	background-color: rgba(250, 250, 250, 0.2);
+	backdrop-filter: blur(10px);
 }
 
 .no-search-data {
-  display: flex;
-  justify-self: center;
+	display: flex;
+	justify-self: center;
 }
 
 @media (prefers-color-scheme: dark) {
-  .no-search-data {
-    color: #fff;
-  }
+	.no-search-data {
+		color: #fff;
+	}
+
+	.container {
+		background-color: rgba(50, 50, 50, 0.3);
+		backdrop-filter: blur(20px);
+	}
 }

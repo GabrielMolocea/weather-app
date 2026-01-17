@@ -3,7 +3,7 @@ import SearchSVG from "./searchSVG";
 import "./listOfCities.css";
 
 interface ListOfCitiesProps {
-	searchHistory: Array<{ city: string; timestamp: Date }>;
+	searchHistory: Array<{ city: string; country: string; timestamp: Date }>;
 	onSearch: (city: string, country: string) => void;
 	onDelete: (city: string) => void;
 }
@@ -34,16 +34,15 @@ function ListOfCities({
 	return (
 		<div className="search-history-container">
 			<h3 className="search-history-title">Search History</h3>
-			<div>
+			<div className="list-cities">
 				{searchHistory.map((entry, index) => (
 					<div key={index} className="history-item">
 						<div className="history-item-content">
-							<span className="history-item-number">{index + 1}.</span>
 							<button
 								onClick={() => handleCityClick(entry.city)}
 								className="history-item-city-button"
 							>
-								{entry.city}
+								{entry.city}, {entry.country}
 							</button>
 						</div>
 
